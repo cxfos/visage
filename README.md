@@ -1,13 +1,13 @@
-# Visage: Visual Element Inspector for Cursor IDE
+# Visage: Visual Element Inspector for VS Code
 
-**Visage** is a Cursor IDE extension that enables developers to visually inspect and interact with frontend elements, mapping them back to source files and integrating with Cursor AI to streamline editing and prototyping.
+**Visage** is a VS Code extension that enables developers to visually inspect and interact with frontend elements, mapping them back to source files and enhancing workflows with AI tools or manual editing.
 
 ---
 
 ## ✨ Features
 
 - **Live Frontend Preview**  
-  Embed a live preview of your React or Next.js app inside the IDE.
+  Embed a live preview of your React or Next.js app inside VS Code.
 
 - **Element Selection Tool**  
   Click on any UI element to highlight and inspect its source.
@@ -15,8 +15,8 @@
 - **Source Code Mapping**  
   Automatically locate the file and line range that generated the selected DOM element.
 
-- **AI Prompting Integration**  
-  Seamlessly send selected code to Cursor AI for intelligent suggestions and refactors.
+- **Prompt Integration**  
+  Seamlessly send selected code to AI tools or use it to inform refactoring.
 
 - **Framework-Aware**  
   Designed for projects using React, Next.js, or similar virtual DOM libraries.
@@ -38,9 +38,9 @@ cd visage
 npm install
 ```
 
-### 3. Open in Cursor IDE
+### 3. Open in VS Code
 
-Launch Cursor IDE and open the extension folder.
+Launch VS Code and open the extension folder.
 
 ### 4. Run the Extension
 
@@ -59,9 +59,7 @@ Press `F5` to open a new Extension Development Host window.
 
 4. Visage will map the clicked element to its source file and highlight the line range.
 
-5. Optionally run:  
-   **"Visage: Send Selection to AI"**  
-   to inject the selected code into Cursor AI’s prompt area.
+5. Optionally use the selection as input for AI tools or refactor manually.
 
 ---
 
@@ -69,13 +67,13 @@ Press `F5` to open a new Extension Development Host window.
 
 ```mermaid
 graph TD
-    A[Webview Panel in Cursor] --> B[Loads frontend preview (localhost)]
+    A[Webview Panel in VS Code] --> B[Loads frontend preview (localhost)]
     B --> C[User clicks "Select Element"]
     C --> D[DOM metadata extracted (data-source)]
     D --> E[PostMessage sent to extension]
     E --> F[Extension maps source code]
     F --> G[Opens file and selects lines]
-    G --> H[Triggers Cursor AI with code context]
+    G --> H[Optional AI integration]
 ```
 
 ---
@@ -86,7 +84,7 @@ graph TD
 
 - Node.js
 - npm
-- Cursor IDE
+- VS Code
 - A running dev server (e.g. `npm run dev` from a Next.js app)
 
 ### Build
@@ -120,4 +118,4 @@ MIT License – see the [LICENSE](LICENSE) file for details.
 ## 🙏 Acknowledgments
 
 - Inspired by [V0.dev](https://v0.dev), [Bolt.new](https://bolt.new), and [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
-- Built using the Cursor IDE extension API
+- Built using the VS Code Extension API

@@ -1,0 +1,31 @@
+{
+    "name": "visage",
+    "displayName": "Visage",
+    "description": "Visual element inspector for VS Code with live preview and source mapping.",
+    "version": "0.0.1",
+    "publisher": "cxfos",
+    "engines": {
+      "vscode": "^1.80.0",
+      "node": "18.18.2",
+      "npm": ">=8.0.0"
+    },
+    "main": "./dist/extension.js",
+    "contributes": {
+      "commands": [
+        {
+          "command": "visage.openPreview",
+          "title": "Visage: Open Preview"
+        }
+      ]
+    },
+    "scripts": {
+      "vscode:prepublish": "tsc -p ./",
+      "build": "tsc",
+      "watch": "tsc -watch"
+    },
+    "devDependencies": {
+      "typescript": "^5.0.0",
+      "vscode": "^1.1.37"
+    }
+  }
+  
